@@ -40,7 +40,7 @@ app.get("/api/:date?", function (req, res) {
     let unixToUTC=dataObject.toUTCString() 
   
 
-    res.json({ unix: dateString, utc:unixToUTC});
+    res.json({ unix: Number(dateString), utc:unixToUTC});
     
   } 
  /*  A 4 digit number is a valid ISO-8601 for the beginning of that year
